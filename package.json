@@ -1,7 +1,7 @@
 {
     "name": "gulp-modernizr-combine",
     "description": "Merge multiple Modernizr config files, and produce a custom Modernizr build containing the feature detects from all of them",
-    "version": "0.1.2",
+    "version": "0.2.1",
     "dependencies": {
 	"gulp-util": "~3.0",
 	"modernizr": "~3.3",

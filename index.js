@@ -22,7 +22,7 @@ var modernizrStream = function () {
 	});
 };
 
-module.exports = function () {
+var modernizrCombine = function () {
 	var c = {
 		"minify": false,
 		"options": [],
@@ -33,6 +33,7 @@ module.exports = function () {
 				cb(new PluginError(PLUGIN_NAME, "Streams aren't supported"));
 			}
 			else if (f.isBuffer()) {
+				gutil.log("Processing file", f.path);
 				this.mergeObject(JSON.parse(f.contents.toString(encoding)), isMain);
 				cb();
 			}
@@ -69,6 +70,10 @@ module.exports = function () {
 			}));
 		}
 		cb();
-	})
-	.pipe(modernizrStream());
+	});
+};
+
+module.exports = {
+	combine: modernizrCombine,
+	stream: modernizrStream
 };
