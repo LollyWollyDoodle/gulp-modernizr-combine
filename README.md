@@ -1,7 +1,9 @@
 # Usage:
 
 ```javascript
+var modernizrCombine = require("gulp-modernizr-combine");
 gulp.src(["modernizr-config.json", ...])
-	.pipe(require("gulp-modernizr-combine")())
+	.pipe(modernizrCombine.combine())
+	.pipe(modernizrCombine.stream())
 	.pipe(gulp.dest("dist"));
 ```
