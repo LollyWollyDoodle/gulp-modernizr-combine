@@ -33,7 +33,6 @@ var modernizrCombine = function () {
 				cb(new PluginError(PLUGIN_NAME, "Streams aren't supported"));
 			}
 			else if (f.isBuffer()) {
-				gutil.log("Processing file", f.path);
 				this.mergeObject(JSON.parse(f.contents.toString(encoding)), isMain);
 				cb();
 			}

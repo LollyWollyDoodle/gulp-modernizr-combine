@@ -1,7 +1,7 @@
 {
     "name": "@lwd/gulp-modernizr-combine",
     "description": "Merge multiple Modernizr config files, and produce a custom Modernizr build containing the feature detects from all of them",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repository": {
 	"type": "git",
 	"url": "https://github.com/LollyWollyDoodle/gulp-modernizr-combine.git"
